@@ -8,8 +8,6 @@ import { useAuth } from "../context/authContext";
 import { auth, db, storage } from "../firebase";
 
 const Register = () => {
-  const { currentUser } = useAuth();
-
   const [err, setErr] = useState(false);
 
   const navigate = useNavigate();

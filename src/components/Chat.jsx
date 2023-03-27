@@ -1,25 +1,25 @@
-import React from 'react'
-import { useChat } from '../context/chatContext'
-import Input from './Input'
-import Messages from './Messages'
+import { IconDots, IconUserPlus, IconVideo } from "@tabler/icons-react";
+import React from "react";
+import { useChat } from "../context/chatContext";
+import Input from "./Input";
+import Messages from "./Messages";
 
 const Chat = () => {
-
-  const {data} = useChat()
+  const { data } = useChat();
   return (
     <div className="chat">
       <div className="chatInfo">
         <span>{data.user?.displayName}</span>
         <div className="chatIcons">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src=""  alt="" />
+          <IconVideo />
+          <IconUserPlus />
+          <IconDots />
         </div>
       </div>
       <Messages />
-      <Input/>
+      <Input />
     </div>
-  )
-}
+  );
+};
 
-export default Chat
+export default Chat;

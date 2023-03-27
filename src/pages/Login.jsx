@@ -1,12 +1,9 @@
-import { IconPhotoUp } from "@tabler/icons-react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/authContext";
 import { auth } from "../firebase";
 
 const Login = () => {
-  const { currentUser } = useAuth();
 
   const [err, setErr] = useState(false);
 
@@ -28,7 +25,7 @@ const Login = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">line</span>
+        <span className="logo">LINE</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit} action="">
           <input
